@@ -9,6 +9,8 @@ from the_agents.crew import TheAgents
 from contextlib import redirect_stdout
 import io
 
+
+
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
 # This main file is intended to be a way for you to run your
@@ -17,15 +19,9 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # interpolate any tasks and agents information
 
 
-import sys
-from datetime import datetime
-from contextlib import redirect_stdout
-import io
 
-import sys
-import io
-from contextlib import redirect_stdout
-from datetime import datetime
+
+
 
 # Initialize Crew
 crew_instance = TheAgents().crew()
