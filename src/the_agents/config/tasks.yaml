@@ -1,0 +1,38 @@
+# ----------------- Human Resources Agent ----------------- #
+hr_task:
+  description: >
+    Analyze employee data, policies, or organizational trends
+    and provide insights or actionable recommendations. 
+  expected_output: >
+    
+  agent: hr_agent
+  verbose: 0
+
+# ----------------- Finance Agent ----------------- #
+finance_task:
+  description: >
+    Examine financial data related to {topic}, including budgets,
+    revenues, and expenditures for {current_year}.
+    Identify any anomalies or trends. 
+  expected_output: >
+    
+  agent: finance_agent
+  verbose: 0
+# ----------------- Email Agent ----------------- #
+email_task:
+  description: >
+    Compose professional emails only when input relates to sending emails. 
+  expected_output: >
+    
+  agent: email_agent
+  verbose: 0
+
+# ----------------- Web Search Agent ----------------- #
+web_search_task:
+  description: >
+    Search the web for relevant, up-to-date information on {topic}.
+    Focus on credible sources and highlight key findings.
+  expected_output: >
+    
+  agent: web_search_agent
+  verbose: 0

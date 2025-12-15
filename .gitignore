@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+
+# CrewAI / LLM artifacts
+storage/
+outputs/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
