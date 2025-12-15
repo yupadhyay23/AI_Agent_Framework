@@ -1,6 +1,5 @@
-# TheAgents Crew
-
-Welcome to the TheAgents Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+# Overview
+Using the template provided by CrewAI, I have designed 4 agents (HR, FINANCE, EMAIL, WEB SEARCH) to return appropriate responses to user queries.
 
 ## Installation
 
@@ -12,43 +11,30 @@ First, if you haven't already, install uv:
 pip install uv
 ```
 
-Next, navigate to your project directory and install the dependencies:
+Next, navigate to the project directory and install the dependencies:
 
 (Optional) Lock the dependencies and install them by using the CLI command:
 ```bash
 crewai install
 ```
-### Customizing
-
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/the_agents/config/agents.yaml` to define your agents
-- Modify `src/the_agents/config/tasks.yaml` to define your tasks
-- Modify `src/the_agents/crew.py` to add your own logic, tools and specific args
-- Modify `src/the_agents/main.py` to add custom inputs for your agents and tasks
-
 ## Running the Project
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+To kickstart your crew of AI agents and begin task execution, run this from the root folder of the project (the_agents):
 
 ```bash
 $ crewai run
 ```
 
-This command initializes the The_Agents Crew, assembling the agents and assigning them tasks as defined in your configuration.
+This command initializes the The_Agents Crew, assembling the agents and assigning them tasks as defined in the configuration.
+The program will then prompt the user for input and parse this input through the LLMs.
+This will return the output of the crew of agents to the terminal as well as send this output to the report.md file.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+## Understanding the Crew
 
-## Understanding Your Crew
+The crew is made up of 4 agents (HR, FINANCE, EMAIL, WEB SEARCH) all equipped with directives and specialized abilities to answer user queries.
+Once the question has been parsed through the LLMs, a response will be outputted to both the terminal and report.md file. Access to google API has been
+given so that the web search agent may provide the user with up to date information.
 
-The The_Agents Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the TheAgents Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
+## Room for improvement
+Currently, I am working on developing a 5th agent, the routing agent, so that the program routes the user query to the appropriate
+specialized agent, which will improve time taken to return an output as well as conserve computing power.
