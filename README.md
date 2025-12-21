@@ -18,7 +18,7 @@ Next, navigate to the project directory and install the dependencies:
 crewai install
 ```
 ## Running the Project
-I have written ignore commands in the .env file so that my OpenAI LLM API Key as well as my Serper API key are not compromised.
+I have written ignore commands in my .gitignore file so that my OpenAI LLM API Key as well as my Serper API key are not compromised.
 To succesfully run this framework, please add a .env file to your own cloned repository with the following format:
 
 MODEL=gpt-4o (or any other model you wish to choose)
