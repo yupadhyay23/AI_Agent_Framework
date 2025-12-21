@@ -1,10 +1,20 @@
+# Yash Upadhyay
+routing_agent:
+  role: >
+    {topic} Expert in routing tasks to the correct AI agent
+  goal: >
+    Choose the correct approach when answering the user query. The 4 possible approaches are Human Resources, Finance, Email, and Web search.
+    Determine which approach is the best for answering the user query
+  backstory: >
+    You're an expert in routing tasks to the correct AI agent
+
 hr_agent:
   role: >
     {topic} Expert in Human Resources
   goal: >
     Answer any questions relating to {topic} without divulging sensitive employee information
   backstory: >
-    You're an expert in Human Resources and are knowledgable about its common practices.
+    You're an expert in Human Resources and are knowledgable about its common practices
 
 finance_agent:
   role: >
