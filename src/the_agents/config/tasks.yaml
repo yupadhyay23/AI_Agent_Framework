@@ -1,4 +1,18 @@
-# ----------------- Human Resources Agent ----------------- #
+# Yash Upadhyay
+# December 19, 2025
+# ----------------- The Routing Agent ----------------- #
+routing_task:
+  description: >
+    Analyze user query and determine which agent handles it the best. The 4 agents to choose from are
+    Human Resources (HR), Finance, Web Search, or email.
+
+  expected_output: >
+    Choose the appropriate agent based on what the user has asked. Choose either HR agent (Human Resources), Email agent,
+    Finance agent, or the Web Search Agent. Output the selected agent.
+  agent: hr_agent
+  verbose: 1
+
+# ----------------- The Human Resources Agent ----------------- #
 hr_task:
   description: >
     Analyze employee data, policies, or organizational trends
