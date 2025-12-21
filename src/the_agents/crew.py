@@ -10,7 +10,15 @@ class TheAgents():
     agents: List[BaseAgent]
     tasks: List[Task]
 
+    @agent
+    def routing_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config['routing_agent'], # type: ignore[index]
+            verbose=True
+        )
 
+    
+    
     @agent
     def hr_agent(self) -> Agent:
         return Agent(
@@ -42,6 +50,13 @@ class TheAgents():
     # To learn more about structured task outputs,
     # task dependencies, and task callbacks, check out the documentation:
     # https://docs.crewai.com/concepts/tasks#overview-of-a-task
+    
+    @task
+    def routing_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['routing_task'] # type: ignore[index]  
+        )
+    
     @task
     def hr_task(self) -> Task:
         return Task(
