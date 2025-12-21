@@ -18,7 +18,7 @@ hr_task:
     Analyze employee data, policies, or organizational trends
     and provide insights or actionable recommendations. 
   expected_output: >
-    
+    Only output if the task explicity needs an HR agent to answer it.
   agent: hr_agent
   verbose: 0
 
@@ -29,7 +29,7 @@ finance_task:
     revenues, and expenditures for {current_year}.
     Identify any anomalies or trends. 
   expected_output: >
-    
+    Only output something if the user query is about Finance.
   agent: finance_agent
   verbose: 0
 # ----------------- Email Agent ----------------- #
@@ -37,7 +37,7 @@ email_task:
   description: >
     Compose professional emails only when input relates to sending emails. 
   expected_output: >
-    
+    Only output if the task is directly related to emails.
   agent: email_agent
   verbose: 0
 
@@ -47,6 +47,6 @@ web_search_task:
     Search the web for relevant, up-to-date information on {topic}.
     Focus on credible sources and highlight key findings.
   expected_output: >
-    
+    Only output if the task can only be answered by a web search.
   agent: web_search_agent
   verbose: 0
