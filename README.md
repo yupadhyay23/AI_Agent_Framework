@@ -18,8 +18,15 @@ Next, navigate to the project directory and install the dependencies:
 crewai install
 ```
 ## Running the Project
+I have written ignore commands in the .env file so that my OpenAI LLM API Key as well as my Serper API key are not compromised.
+To succesfully run this framework, please add a .env file to your own cloned repository with the following format:
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of the project (the_agents):
+MODEL=gpt-4o (or any other model you wish to choose)
+OPENAI_API_KEY= ["YOUR API KEY HERE"]
+SERPER_API_KEY=["YOUR SERPER API KEY HERE"]
+CREWAI_TRACING_ENABLED=true
+
+Now that the API keys have been configured, run this from the root folder of the project (the_agents):
 
 ```bash
 $ crewai run
@@ -35,6 +42,7 @@ The crew is made up of 4 agents (HR, FINANCE, EMAIL, WEB SEARCH) all equipped wi
 Once the question has been parsed through the LLMs, a response will be outputted to both the terminal and report.md file. Access to google API has been
 given so that the web search agent may provide the user with up to date information.
 
-## Room for improvement
-Currently, I am working on developing a 5th agent, the routing agent, so that the program routes the user query to the appropriate
-specialized agent, which will improve time taken to return an output as well as conserve computing power.
+## Recent Updates Made
+I have recently configured an additional agent, the Routing agent. This agent's only task is to choose the most appropriate
+agent based on the user query. This wil ensure the correct approach is taken by the LLM when understanding, analyzing, and 
+most importantly returning an appropriate answer back to the user.
