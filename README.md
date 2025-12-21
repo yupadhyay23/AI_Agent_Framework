@@ -22,8 +22,8 @@ I have written ignore commands in my .gitignore file so that my OpenAI LLM API K
 To succesfully run this framework, please add a .env file to your own cloned repository with the following format:
 
 ### MODEL=gpt-4o (or any other model you wish to choose)
-### OPENAI_API_KEY= "YOUR API KEY HERE"
-### SERPER_API_KEY="YOUR SERPER API KEY HERE
+### OPENAI_API_KEY= YOUR API KEY HERE
+### SERPER_API_KEY=YOUR SERPER API KEY HERE
 ### CREWAI_TRACING_ENABLED=true
 
 Now that the API keys have been configured, run this from the root folder of the project (the_agents):
